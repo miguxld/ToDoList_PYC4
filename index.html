@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/icons/ico.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>To Do List App</title>
+</head>
+
+<body>
+    <main>
+        <section class="container">
+            <h1>To Do List</h1>
+            <p>
+                Stay organized, stay ahead!
+            </p>
+            <form action="">
+                <input type="text" name="task" id="task-input" placeholder="New think to do" required>
+                <button>
+                    <img src="assets/icons/put.svg" alt="icon">
+                </button>
+            </form>
+            <article class="instructions">
+                <button disabled>
+                    <img src="assets/icons/anchor.svg" alt="icon">
+                    <span>IMPORTANT TASK</span>
+                </button>
+                <button disabled>
+                    <img src="assets/icons/delete.svg" alt="icon" srcset="">
+                    <span>DELETE TASK</span>
+                </button>
+                <p>
+                    >Use 'IMPORTANT TASK' button to mark your priority task's. Use 'DELETE TASK' button to remove a task.
+                </p>
+            </article>
+            <hr>
+            <ul id="task-container">
+            </ul>
+            <template>
+                <li>
+                    <p class="task-text"></p>
+                    <input type="checkbox" name="complete" id="complete">
+                    <button class="anchor">
+                        <label for="anchor">
+                            <img src="assets/icons/anchor.svg" alt="anchor">
+                        </label>
+                        <input type="checkbox" name="anchor" id="anchor" style="display: none;">
+                    </button>
+                    <button class="delete-task">
+                        <img src="assets/icons/delete.svg" alt="">
+                    </button>
+                </li>
+            </template>
+            <button id="deleteAll">DELETE ALL</button>
+        </section>
+    </main>
+    <footer>
+        To Do List by <a href="https://fazdev-front.netlify.app/">Leonardo</a>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
